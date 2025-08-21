@@ -6,6 +6,10 @@ const app = express();
 
 const port = 6969;
 
+
+// Data understanding middleware
+app.use(express.json());
+app.use(express.urlencoded({ extended: true}));
 // Connect DB
 
 connectDB();
