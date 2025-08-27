@@ -2,7 +2,11 @@ import { Schema, model } from "mongoose";
 
 // Write the schema
 const schema = new Schema({
-  title: String,
+  title: {
+    type: String,
+    required: true,
+    unique: true
+  },
   desc: String
 })
 
